@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/eyeofhoruslot.com_react/static/css/main.b5320759.css",
-    "main.js": "/eyeofhoruslot.com_react/static/js/main.72e3e19f.js",
+    "main.css": "/eyeofhoruslot.com_react/static/css/main.ca040170.css",
+    "main.js": "/eyeofhoruslot.com_react/static/js/main.5c4b246a.js",
     "index.html": "/eyeofhoruslot.com_react/index.html",
-    "main.b5320759.css.map": "/eyeofhoruslot.com_react/static/css/main.b5320759.css.map",
-    "main.72e3e19f.js.map": "/eyeofhoruslot.com_react/static/js/main.72e3e19f.js.map"
+    "main.ca040170.css.map": "/eyeofhoruslot.com_react/static/css/main.ca040170.css.map",
+    "main.5c4b246a.js.map": "/eyeofhoruslot.com_react/static/js/main.5c4b246a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5320759.css",
-    "static/js/main.72e3e19f.js"
+    "static/css/main.ca040170.css",
+    "static/js/main.5c4b246a.js"
   ]
 }
