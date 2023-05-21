@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #2a363b;
+  box-shadow: rgb(0 0 0 / 14%) 0px 4px 2px 0px,
+    rgb(0 0 0 / 12%) 0px 10px 5px 0px;
+}
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
+}
+
+.activeLink {
+  composes: link;
+  color: #ed6c02;
+}
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}

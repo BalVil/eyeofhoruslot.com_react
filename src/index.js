@@ -1,10 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+import App from './App';
+import './styles/global.scss';
+import './styles/vars.scss';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="eyeofhoruslot.com_react">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
