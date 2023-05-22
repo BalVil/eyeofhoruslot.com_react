@@ -1,0 +1,41 @@
+@import 'styles/vars';
+
+.contact {
+  padding-top: 40px;
+  padding-bottom: 90px;
+
+  text-align: center;
+
+  background-image: url(/img/bcg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 90px;
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.navBar {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+// .contact-us__container {
+//   width: 80%;
+
+//   @media screen and (min-width: 1200px) {
+//     width: 1200px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }

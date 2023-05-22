@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Hero from 'components/hero/Hero';
-import styles from 'components/container/Container.module.scss';
+import Footer from 'components/footer/Footer';
+import Cookies from 'components/coockies/Cookies';
 
 function Home() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
-    <div className={styles.container}>
-      {/* {movies && <MovieList movies={movies} titlePage={'Trending today'} />} */}
-      <Hero />
-    </div>
+    <>
+      <main>
+        <Hero />
+      </main>
+      <Footer />
+      {isOpen && <Cookies setIsOpen={setIsOpen} />}
+    </>
   );
 }
 

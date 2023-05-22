@@ -1,0 +1,48 @@
+@import 'styles/vars';
+
+.backDrop {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.62);
+
+  @include Animation(opacity, visibility);
+}
+
+.modalForm {
+  // width: 250px;
+  // height: 170px;
+  // background: white;
+  // color: white;
+  // z-index: 10;
+  // border-radius: 16px;
+  // box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  width: 350px;
+
+  background: linear-gradient(33deg, #00b9d4, #2f4097);
+
+  @media screen and (min-width: 1200px) {
+    width: 640px;
+    padding: 44px 24px;
+    grid-template-columns: 40% 55%;
+    gap: 5%;
+  }
+}
+
+.modalImg {
+  margin: 0 auto;
+  border-radius: 40px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 16px;
+  }
+}

@@ -1,0 +1,23 @@
+@import 'styles/vars';
+
+.closeBtn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -18px;
+  right: -18px;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+
+  @include Animation(background-color);
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-accent-variant);
+  }
+}

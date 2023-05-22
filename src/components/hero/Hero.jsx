@@ -1,26 +1,34 @@
+import React, { useState } from 'react';
+
 import Container from 'components/container/Container';
+import Modal from 'components/modal/Modal';
+
 import styles from './Hero.module.scss';
+import homePageImage from 'images/game.jpg';
+import Button from 'components/button/Button';
 
 function Hero() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
-    <section>
-      <Container>
+    <section className={styles.heroSection}>
+      <Container className={styles.heroContainer}>
         <h1 className={styles.heroTitle}>
-          Join in a free social gaming experience
+          Embark on a free social gaming adventure.
         </h1>
         <div>
           <img
-            src="./assets/img/game.jpg"
-            alt="Lucky Joker 100 poster"
-            width="1280"
-            height="960"
+            src={homePageImage}
+            alt="Colt Lightning poster"
+            width="1200"
+            height="600"
             className={styles.gameImg}
           />
         </div>
-        <div>
-          <button type="button" className={styles.btn} data-modal-open4>
-            Play
-          </button>
+        <div className={styles.btnContainer}>
+          <Button title={'Play'} onClick={() => setIsOpen(true)} />
+
+          {isOpen && <Modal setIsOpen={setIsOpen} />}
         </div>
       </Container>
     </section>

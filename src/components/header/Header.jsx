@@ -18,14 +18,6 @@ function Header() {
               Home
             </NavLink>
             <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? styles.activeLink : styles.link
-              }
-            >
-              About
-            </NavLink>
-            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? styles.activeLink : styles.link

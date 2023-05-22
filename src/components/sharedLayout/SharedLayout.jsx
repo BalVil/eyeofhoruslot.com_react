@@ -4,9 +4,9 @@ import Header from 'components/header/Header';
 
 export default function SharedLayout() {
   return (
-    <div>
+    <>
       <Header />
       <Outlet />
-    </div>
+    </>
   );
 }

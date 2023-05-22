@@ -1,44 +1,5 @@
 @import 'styles/vars';
 
-.heroSection {
-  height: 100%;
-  padding: 100px 0;
-
-  background: linear-gradient(33deg, #2f4097, #00b9d4);
-  text-align: center;
-
-  @media screen and (min-width: 720px) {
-    padding: 160px 0;
-  }
-}
-
-.heroTitle {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.62em;
-  letter-spacing: 0.06em;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-light);
-
-  text-shadow: 0px 11px 10px rgba(81, 67, 21, 0.8);
-
-  @media screen and (min-width: 1200px) {
-    font-size: 50px;
-    line-height: 1.36em;
-  }
-}
-
-.gameImg {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.btnContainer {
-  margin-top: 5rem;
-}
-
 .btn {
   position: relative;
   min-width: 64px;
@@ -61,8 +22,9 @@
   border-radius: 6px;
   color: var(--color-white);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
 
-  //   @include Animation(box-shadow);
+  @include Animation(box-shadow);
 
   &:hover,
   &:focus {

@@ -1,45 +1,45 @@
 @import 'styles/vars';
 
-.heroSection {
-  height: 100%;
-  padding: 100px 0;
+.cookieBar {
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
 
-  background: linear-gradient(33deg, #2f4097, #00b9d4);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
   text-align: center;
 
-  @media screen and (min-width: 720px) {
-    padding: 160px 0;
-  }
-}
+  background: var(--color-light);
 
-.heroTitle {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.62em;
-  letter-spacing: 0.06em;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-light);
-
-  text-shadow: 0px 11px 10px rgba(81, 67, 21, 0.8);
+  transform: translateX(-50%);
 
   @media screen and (min-width: 1200px) {
-    font-size: 50px;
-    line-height: 1.36em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2.5rem;
+    padding: 16px;
   }
 }
 
-.gameImg {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.cookiebar p {
+  color: var(--color-dark);
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
 }
 
-.btnContainer {
-  margin-top: 5rem;
+.actionsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
-.btn {
+.btnCookies {
   position: relative;
   min-width: 64px;
   padding: 6px 16px;
@@ -62,7 +62,7 @@
   color: var(--color-white);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-  //   @include Animation(box-shadow);
+  @include Animation(box-shadow);
 
   &:hover,
   &:focus {
