@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import Container from 'components/container/Container';
 import Modal from 'components/modal/Modal';
@@ -8,7 +9,7 @@ import homePageImage from 'images/game.jpg';
 import Button from 'components/button/Button';
 
 function Hero() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className={styles.heroSection}>
@@ -28,7 +29,13 @@ function Hero() {
         <div className={styles.btnContainer}>
           <Button title={'Play'} onClick={() => setIsOpen(true)} />
 
-          {isOpen && <Modal setIsOpen={setIsOpen} />}
+          {isOpen &&
+            createPortal(
+              <Modal setIsOpen={setIsOpen} />,
+              document.querySelector('#modal-root')
+            )}
+
+          {/* {isOpen && <Modal setIsOpen={setIsOpen} />} */}
         </div>
       </Container>
     </section>

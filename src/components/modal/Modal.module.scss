@@ -2,10 +2,9 @@
 
 .backDrop {
   z-index: 10;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
 
@@ -14,25 +13,25 @@
   @include Animation(opacity, visibility);
 }
 
-.modalForm {
-  // width: 250px;
-  // height: 170px;
-  // background: white;
-  // color: white;
-  // z-index: 10;
-  // border-radius: 16px;
-  // box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-
+.modalWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   display: grid;
   grid-template-columns: 1fr;
   gap: 36px;
   width: 350px;
+  padding: 44px 24px;
 
-  background: linear-gradient(33deg, #00b9d4, #2f4097);
+  border-radius: 8px;
+  color: var(--color-primary);
+  background: radial-gradient(circle at top right, #ebf1fc, #fffade 30%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
   @media screen and (min-width: 1200px) {
     width: 640px;
-    padding: 44px 24px;
     grid-template-columns: 40% 55%;
     gap: 5%;
   }
@@ -44,5 +43,105 @@
 
   @media screen and (min-width: 1200px) {
     padding-top: 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formGroup {
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.formInput {
+  width: 280px;
+  height: 40px;
+  padding: 11px 60px 12px 14px;
+
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 1.36em;
+  letter-spacing: 0.04em;
+
+  @include Animation(background-color, outline, box-shadow);
+
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.02);
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(245, 146, 86, 0.5);
+  }
+
+  &::placeholder {
+    color: var(--color-light);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+    line-height: 1.39em;
+  }
+}
+
+// .checkbox {
+//   width: 100%;
+//   margin-top: 20px;
+//   margin-bottom: 36px;
+
+//   @media screen and (min-width: 1200px) {
+//     margin-bottom: 44px;
+//   }
+// }
+// .checkboxLabel {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+
+//   line-height: 1.71em;
+//   letter-spacing: 0.03em;
+//   color: var(--color-dark);
+
+//   @media screen and (min-width: 1200px) {
+//     font-size: 1.1rem;
+//   }
+// }
+
+.link {
+  color: var(--color-primary);
+
+  @include Animation(color);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-weight: 500;
+  }
+}
+
+.errorMsg {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 16px;
+
+  font-size: 11px;
+  color: red;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 32px;
   }
 }
