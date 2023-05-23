@@ -1,11 +1,17 @@
 import styles from './Button.module.scss';
 
-function Button({ ariaLabel, title, type = 'button', onClick }) {
+function Button({
+  variant = 'btn',
+  ariaLabel,
+  title,
+  type = 'button',
+  onClick,
+}) {
   return (
     <button
       aria-label={ariaLabel}
       type={type}
-      className={styles.btn}
+      className={styles[variant]}
       onClick={onClick}
     >
       {title}

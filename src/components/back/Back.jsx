@@ -5,23 +5,17 @@ import styles from './Back.module.scss';
 
 const Back = ({ backLink }) => {
   return (
-    <>
+    <div className={styles.backWrap}>
       <Link to={backLink} className={styles.link}>
         <IoMdArrowRoundBack className={styles.svg} size={16} />
         Go back
       </Link>
-    </>
+    </div>
   );
 };
 
 export default Back;
 
 Back.propTypes = {
-  backLink: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-    search: PropTypes.string.isRequired,
-    key: PropTypes.string.isRequired,
-    hash: PropTypes.string,
-    state: PropTypes.bool,
-  }).isRequired,
+  backLink: PropTypes.string.isRequired,
 };

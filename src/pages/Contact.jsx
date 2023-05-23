@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import Back from 'components/back/Back';
 import ContactForm from 'components/contactForm/ContactForm';
 import Footer from 'components/footer';
+import Container from 'components/container/Container';
+import Section from 'components/section/Section';
 
 function Contact() {
   const location = useLocation();
@@ -11,8 +13,12 @@ function Contact() {
   return (
     <>
       <main>
-        <Back backLink={backLinkHref} />
-        <ContactForm />
+        <Section>
+          <Container>
+            {/* <Back backLink={backLinkHref} /> */}
+            <ContactForm />
+          </Container>
+        </Section>
       </main>
       <Footer />
     </>

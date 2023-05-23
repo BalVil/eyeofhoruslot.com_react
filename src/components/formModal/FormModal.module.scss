@@ -29,15 +29,18 @@
 .formInput {
   width: 280px;
   height: 40px;
-  padding: 11px 60px 12px 14px;
 
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-secondary);
-  border-radius: 40px;
-  font-size: 14px;
-  line-height: 1.36em;
-  letter-spacing: 0.04em;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary-variant);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+
+  @media screen and (min-width: 1200px) {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
 
   @include Animation(background-color, outline, box-shadow);
 
@@ -48,7 +51,7 @@
   }
 
   &::placeholder {
-    color: var(--color-light);
+    color: var(--color-dark);
   }
 
   @media screen and (min-width: 1200px) {
@@ -57,15 +60,6 @@
   }
 }
 
-// .checkbox {
-//   width: 100%;
-//   margin-top: 20px;
-//   margin-bottom: 36px;
-
-//   @media screen and (min-width: 1200px) {
-//     margin-bottom: 44px;
-//   }
-// }
 .checkboxLabel {
   display: flex;
   align-items: center;
@@ -121,7 +115,7 @@
   margin-left: 16px;
 
   font-size: 11px;
-  color: red;
+  color: rgb(252, 96, 96);
 
   @media screen and (min-width: 1200px) {
     margin-left: 32px;

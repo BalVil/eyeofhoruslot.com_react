@@ -8,7 +8,7 @@ function Header() {
     <>
       <header className={styles.header}>
         <Container>
-          <nav>
+          <nav className={styles.navBlock}>
             <NavLink
               to="/"
               className={({ isActive }) =>

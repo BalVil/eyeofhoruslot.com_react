@@ -4,7 +4,6 @@
   height: 100%;
   padding: 100px 0;
 
-  background: linear-gradient(33deg, #2f4097, #00b9d4);
   text-align: center;
 
   @media screen and (min-width: 720px) {
@@ -29,6 +28,10 @@
   }
 }
 
+.homeImgWrap {
+  margin-top: 40px;
+}
+
 .gameImg {
   width: 100%;
   border-radius: 8px;
@@ -36,7 +39,9 @@
 }
 
 .btnContainer {
-  margin-top: 5rem;
+  margin-top: 3rem;
+
+  text-align: center;
 }
 
 .btn {

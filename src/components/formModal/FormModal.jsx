@@ -17,12 +17,15 @@ function FormModal({ setIsOpen }) {
   const [isOpenPrivacy, setIsOpenPrivacy] = useState(false);
 
   const validationSchema = Yup.object({
-    email: Yup.string().email('Invalid email address').required('Required'),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('This field is required'),
   });
 
   const handleSubmit = values => {
     if (values) {
       setIsOpenGame(true);
+      return;
     }
   };
 
@@ -60,11 +63,10 @@ function FormModal({ setIsOpen }) {
                     name="email"
                     className={styles.formInput}
                     placeholder="Enter your email"
+                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
                   />
                   {errors.email && touched.email && (
-                    <div className={styles.errorMsg}>
-                      Something went wrong, try again.
-                    </div>
+                    <div className={styles.errorMsg}>try again</div>
                   )}
                 </label>
                 <label className={styles.checkboxLabel}>

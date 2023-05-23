@@ -21,7 +21,7 @@ function Social() {
             height="36"
             className={styles.socialIcon}
           /> */}
-          <FaPinterestP />
+          <FaPinterestP size={30} />
         </a>
       </li>
       <li>
@@ -32,7 +32,7 @@ function Social() {
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillFacebook />
+          <AiFillFacebook size={30} />
         </a>
       </li>
       <li>
@@ -43,7 +43,7 @@ function Social() {
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillInstagram />
+          <AiFillInstagram size={30} />
         </a>
       </li>
       <li>
@@ -54,7 +54,7 @@ function Social() {
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillYoutube />
+          <AiFillYoutube size={30} />
         </a>
       </li>
       <li>
@@ -65,7 +65,7 @@ function Social() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaVimeo />
+          <FaVimeo size={30} />
         </a>
       </li>
     </ul>
