@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 
 import Container from 'components/container/Container';
-import Modal from 'components/modal/Modal';
+import FormModal from 'components/formModal/FormModal';
 
 import styles from './Hero.module.scss';
 import homePageImage from 'images/game.jpg';
@@ -29,13 +28,7 @@ function Hero() {
         <div className={styles.btnContainer}>
           <Button title={'Play'} onClick={() => setIsOpen(true)} />
 
-          {isOpen &&
-            createPortal(
-              <Modal setIsOpen={setIsOpen} />,
-              document.querySelector('#modal-root')
-            )}
-
-          {/* {isOpen && <Modal setIsOpen={setIsOpen} />} */}
+          {isOpen && <FormModal setIsOpen={setIsOpen} />}
         </div>
       </Container>
     </section>

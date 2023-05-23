@@ -1,0 +1,129 @@
+@import 'styles/vars';
+
+.modalImg {
+  margin: 0 auto;
+  border-radius: 40px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formGroup {
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.formInput {
+  width: 280px;
+  height: 40px;
+  padding: 11px 60px 12px 14px;
+
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 1.36em;
+  letter-spacing: 0.04em;
+
+  @include Animation(background-color, outline, box-shadow);
+
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.02);
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(245, 146, 86, 0.5);
+  }
+
+  &::placeholder {
+    color: var(--color-light);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+    line-height: 1.39em;
+  }
+}
+
+// .checkbox {
+//   width: 100%;
+//   margin-top: 20px;
+//   margin-bottom: 36px;
+
+//   @media screen and (min-width: 1200px) {
+//     margin-bottom: 44px;
+//   }
+// }
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+
+  line-height: 1.3em;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+
+  // @media screen and (min-width: 1200px) {
+  //   font-size: 1.1rem;
+  // }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 8px;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 50%;
+  background-color: #fff;
+
+  @include Animation(background-color);
+
+  @media screen and (min-width: 1200px) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.link {
+  color: var(--color-primary);
+
+  @include Animation(color);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-weight: 500;
+  }
+}
+
+.errorMsg {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 16px;
+
+  font-size: 11px;
+  color: red;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 32px;
+  }
+}

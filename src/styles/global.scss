@@ -7,13 +7,13 @@
 html {
   scroll-behavior: smooth;
 }
-
 /* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
-/* Hide scrollbar for Firefox */
-html {
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
@@ -24,10 +24,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //   background-image: url(./images/bg-texture.png);
   //   background-color: $bakgroundColor;
   //   color: $textColor;
-  //   overflow: overlay;
+  overflow: overlay;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

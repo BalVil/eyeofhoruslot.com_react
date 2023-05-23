@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Hero from 'components/hero/Hero';
-import Footer from 'components/footer/Footer';
+import Footer from 'components/footer';
 import Cookies from 'components/coockies/Cookies';
 
 function Home() {
