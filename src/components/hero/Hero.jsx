@@ -15,7 +15,7 @@ function Hero() {
     <Section>
       <Container className={styles.heroContainer}>
         <h1 className={styles.heroTitle}>
-          Embark on a free social gaming adventure.
+          Join the fun of a free social gaming experience!
         </h1>
         <div className={styles.homeImgWrap}>
           <img

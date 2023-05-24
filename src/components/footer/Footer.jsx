@@ -55,9 +55,12 @@ function Footer() {
 
             <div>
               <p className={styles.footerFont}>
-                Disclaimer: For 18+ players, our platform offers free social
-                games. We promote responsible gambling and note that success in
-                these games does not guarantee real money gambling achievements.
+                Disclaimer: This website is dedicated to offering free social
+                games to people over the age of 18. We are committed to
+                promoting responsible gambling and encourage users to seek
+                assistance if necessary. It is critical to recognize that
+                success in our social casino game does not imply success in
+                "real money gambling."
               </p>
             </div>
 
