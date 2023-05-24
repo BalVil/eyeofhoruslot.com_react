@@ -23,8 +23,8 @@
   letter-spacing: 0.03em;
 
   color: var(--color-white);
-  text-shadow: 3px 0px 7px var(--color-dark), -3px 0px 7px var(--color-dark),
-    0px 4px 7px var(--color-dark);
+  text-shadow: 3px 0px 4px var(--color-dark), -3px 0px 4px var(--color-dark),
+    0px 4px 4px var(--color-dark);
 
   @media screen and (min-width: 1200px) {
     font-size: 40px;
