@@ -65,7 +65,9 @@ function Footer() {
             </div>
 
             <div className={styles.footerFont}>
-              <small>Ifruitslot.com&copy; 2022-2023 All rights reserved </small>
+              <small>
+                Eyeofhoruslot.com.com&copy; 2022-2023 All rights reserved{' '}
+              </small>
             </div>
           </div>
         </Container>
