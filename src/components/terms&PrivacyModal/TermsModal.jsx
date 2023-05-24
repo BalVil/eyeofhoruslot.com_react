@@ -6,7 +6,7 @@ function TermsModal({ showTerms }) {
   return (
     <>
       {showTerms && (
-        <Modal variant="modal">
+        <Modal variant="modal" closeModal={showTerms}>
           <ButtonClose
             aria-label={'close'}
             type={'button'}

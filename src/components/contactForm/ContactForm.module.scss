@@ -1,3 +1,5 @@
+@import 'styles/vars';
+
 .formWrapper {
   max-width: 600px;
   display: flex;
@@ -41,20 +43,31 @@
 
 .formInput {
   width: 100%;
-  background: var(--color-white);
+
+  background: transparent;
   border: 2px solid var(--color-primary-variant);
   border-radius: 0.5rem;
+  color: var(--color-white);
   font-family: inherit;
   font-size: 1rem;
   padding: 1rem;
 
+  @include Animation(background);
+
+  &::placeholder {
+    color: var(--color-light);
+  }
+
   @media screen and (min-width: 1200px) {
     padding: 1.2rem;
+    border: 3px solid var(--color-primary-variant);
     font-size: 1.2rem;
   }
 }
+
 .formTextarea {
   composes: formInput;
+
   resize: none;
   height: 100px;
 }

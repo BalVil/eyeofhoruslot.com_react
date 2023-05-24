@@ -9,7 +9,7 @@ import PrivacyModal from 'components/terms&PrivacyModal/PrivacyModal';
 import ButtonClose from 'components/buttonClose/ButtonClose';
 import Button from 'components/button/Button';
 import styles from './FormModal.module.scss';
-import modalImage from 'images/game.jpg';
+import modalImage from 'images/logo.png';
 
 function FormModal({ setIsOpen }) {
   const [isOpenGame, setIsOpenGame] = useState(false);
@@ -32,7 +32,7 @@ function FormModal({ setIsOpen }) {
   return (
     <>
       {setIsOpen && (
-        <Modal variant="formModal">
+        <Modal variant="formModal" closeModal={setIsOpen}>
           <ButtonClose
             aria-label={'close'}
             type={'button'}
@@ -43,7 +43,7 @@ function FormModal({ setIsOpen }) {
             src={modalImage}
             alt="Colt Lightning"
             className={styles.modalImg}
-            width="250"
+            width="230"
           />
 
           <Formik
@@ -71,23 +71,23 @@ function FormModal({ setIsOpen }) {
                 </label>
                 <label className={styles.checkboxLabel}>
                   <Field
-                    className={styles.checkbox}
+                    className={styles.checkboxInput}
                     required
                     name="acceptTerms"
                     type="checkbox"
                   />
-                  <span className={styles.checkboxIcon}>
+                  <span className={styles.checkboxText}>
                     I'm 18 years old and I accept the&nbsp;
                     <a
-                      href="#"
+                      href="#footer"
                       className={styles.link}
                       onClick={() => setIsOpenTerms(true)}
                     >
-                      Terms & Conditions&nbsp;
+                      Terms&Conditions&nbsp;
                     </a>
                     and&nbsp;
                     <a
-                      href="#"
+                      href="#footer"
                       className={styles.link}
                       onClick={() => setIsOpenPrivacy(true)}
                     >

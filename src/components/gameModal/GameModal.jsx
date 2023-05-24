@@ -5,7 +5,7 @@ import styles from './GameModal.module.scss';
 
 function GameModal({ showGame }) {
   return (
-    <Modal variant="gameModal">
+    <Modal variant="gameModal" closeModal={showGame}>
       <ButtonClose
         aria-label={'close'}
         type={'button'}

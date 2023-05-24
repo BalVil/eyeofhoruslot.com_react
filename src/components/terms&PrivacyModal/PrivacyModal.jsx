@@ -6,7 +6,7 @@ function PrivacyModal({ showPrivacy }) {
   return (
     <>
       {showPrivacy && (
-        <Modal variant="modal">
+        <Modal variant="modal" closeModal={showPrivacy}>
           <ButtonClose
             aria-label={'close'}
             type={'button'}

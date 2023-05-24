@@ -2,11 +2,7 @@
 
 .modalImg {
   margin: 0 auto;
-  border-radius: 40px;
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 16px;
-  }
+  border-radius: 8px;
 }
 
 .form {
@@ -17,25 +13,35 @@
 
 .formGroup {
   position: relative;
+  width: 90%;
 
   &:not(:last-of-type) {
-    margin-bottom: 16px;
-  }
-  &:last-of-type {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 }
 
 .formInput {
-  width: 280px;
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  border-bottom: 1px solid var(--color-white);
+  padding: 1em 0 0.4em;
+  text-align: center;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 300;
+  line-height: 1.5;
+  color: inherit;
+  outline: none;
+
+  width: 100%;
   height: 40px;
 
-  background: var(--color-white);
-  border: 2px solid var(--color-primary-variant);
-  border-radius: 0.5rem;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 1rem;
+  // background: var(--color-white);
+  // border: 2px solid var(--color-primary-variant);
+  // border-radius: 0.5rem;
+  // font-family: inherit;
+  // font-size: 1rem;
+  // padding: 1rem;
 
   @media screen and (min-width: 1200px) {
     padding: 1.2rem;
@@ -44,14 +50,14 @@
 
   @include Animation(background-color, outline, box-shadow);
 
-  &:focus {
-    background-color: rgba(0, 0, 0, 0.02);
-    outline: 0;
-    box-shadow: 0 0 0 0.1rem rgba(245, 146, 86, 0.5);
-  }
+  // &:focus {
+  //   background-color: rgba(0, 0, 0, 0.02);
+  //   outline: 0;
+  //   box-shadow: 0 0 0 0.1rem rgba(245, 146, 86, 0.5);
+  // }
 
   &::placeholder {
-    color: var(--color-dark);
+    color: var(--color-white);
   }
 
   @media screen and (min-width: 1200px) {
@@ -61,19 +67,27 @@
 }
 
 .checkboxLabel {
+  width: 90%;
   display: flex;
   align-items: center;
+  margin-bottom: 28px;
 
+  font-size: 0.9rem;
   line-height: 1.3em;
-  letter-spacing: 0.03em;
-  color: var(--color-primary);
+  color: var(--color-black);
 
-  // @media screen and (min-width: 1200px) {
-  //   font-size: 1.1rem;
-  // }
+  @media screen and (min-width: 1200px) {
+    font-size: 1.1rem;
+  }
 }
 
-.checkbox {
+@media screen and (min-width: 1200px) {
+  .checkboxText {
+    width: 90%;
+  }
+}
+
+.checkboxInput {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +109,7 @@
 }
 
 .link {
-  color: var(--color-primary);
+  color: var(--color-dark);
 
   @include Animation(color);
 

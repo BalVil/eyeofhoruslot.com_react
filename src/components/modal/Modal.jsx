@@ -2,10 +2,12 @@ import { createPortal } from 'react-dom';
 
 import styles from './Modal.module.scss';
 
-function Modal({ variant, children }) {
+function Modal({ variant, closeModal, children }) {
   return createPortal(
-    <div className={styles.backDrop}>
-      <div className={styles[variant]}>{children}</div>
+    <div className={styles.backDrop} onClick={() => closeModal(false)}>
+      <div className={styles[variant]} onClick={e => e.stopPropagation()}>
+        {children}
+      </div>
     </div>,
     document.querySelector('#modal-root')
   );

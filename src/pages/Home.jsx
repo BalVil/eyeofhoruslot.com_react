@@ -6,16 +6,17 @@ import Footer from 'components/footer';
 import Cookies from 'components/coockies/Cookies';
 
 function Home() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpenStop, setIsOpenStop] = useState(true);
+  const [isOpenCookies, setIsOpenCookies] = useState(true);
 
   return (
     <>
-      {isOpen && <StopModal setIsOpen={setIsOpen} />}
+      {isOpenStop && <StopModal showStopModal={setIsOpenStop} />}
       <main>
         <Hero />
       </main>
       <Footer />
-      {isOpen && <Cookies setIsOpen={setIsOpen} />}
+      {isOpenCookies && <Cookies showCookies={setIsOpenCookies} />}
     </>
   );
 }

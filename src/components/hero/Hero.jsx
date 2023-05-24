@@ -27,7 +27,11 @@ function Hero() {
           />
         </div>
         <div className={styles.btnContainer}>
-          <Button title={'Play'} onClick={() => setIsOpen(true)} />
+          <Button
+            variant="btnForm"
+            title={'Play'}
+            onClick={() => setIsOpen(true)}
+          />
 
           {isOpen && <FormModal setIsOpen={setIsOpen} />}
         </div>
